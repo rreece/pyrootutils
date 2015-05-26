@@ -100,7 +100,7 @@ def main():
         weight = 1.0
 
         hm.hist('h_w', "ROOT.TH1F('$', ';w;Events', 20, -2.0, 3.0)").Fill(tree.w, weight)
-        hm.hist('h_n', "ROOT.TH1F('$', ';n;Events', 20, -0.5, 19.5)").Fill(tree.n, weight)
+        hm.hist('h_ph_n', "ROOT.TH1F('$', ';ph_n;Events', 20, -0.5, 19.5)").Fill(tree.ph_n, weight)
 
     hm.write_hists('output.hists.root')
 

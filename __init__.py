@@ -9,10 +9,8 @@ import stl_loader
 import fileutils
 import rootutils
 
-import histmanager
 from histmanager import HistManager
-
-import treewriter
+from treereader import TreeReader
 from treewriter import TreeWriter
 
 
