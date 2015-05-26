@@ -2,10 +2,22 @@
 
 A set of useful tools for taming pyroot.
 
+-   author: Ryan Reece <ryan.reece@cern.ch>
+-   created: May 26, 2015
+
+
+## Requirements
+
+-   Python
+-   ROOT
+
+
 ## Getting started
 
-If you have python and root setup ok, you should be able to source the setup script in this directory:
+Check out `pyrootutils` and setup:
 
+    git clone https://github.com/rreece/pyrootutils.git
+    cd pyrootutils
     source setup.sh
 
 In the test directory, there are some example scripts.
@@ -19,4 +31,5 @@ Run this first script which makes a tree:
 And then you should be able to run the next script to read the tree and make some histograms:
 
     python read_tree.py myntuple.root 
+
 
