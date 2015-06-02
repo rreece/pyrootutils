@@ -45,13 +45,17 @@ class HistManager(object):
 
     #__________________________________________________________________________
     def write_hists(self, outfile):
-        print 'Writing histograms.'
+        print 'Writing histograms to %s ...' % outfile
         root_file = ROOT.TFile(outfile, "RECREATE") # "UPDATE")
         root_file.cd()
+        n_hists = 0
         for key, h in self._hists.iteritems():
             if isinstance(h, ROOT.TObject):
                 h.SetName(os.path.basename(key))  # HACK to remove ";*" e.g. h_n_events;1
                 fileutils.write(h, outfile, os.path.dirname(key))
+                n_hists += 1
         root_file.Close()
+        print '  %i histograms written.' % n_hists
+        return n_hists
 
 
